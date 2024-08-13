@@ -40,6 +40,20 @@ flowchart TD
     SVC --> SINKMEM
 ```
 
+A short description of the different modules.
+
+| Name                                                                   | Description                                                                                                                                                                                                                                                     |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`@eik/service`](https://github.com/eik-lib/service)                   | The [HTTP server](https://eik.dev/docs/server/) running the Eik service.                                                                                                                                                                                        |
+| [`@eik/core`](https://github.com/eik-lib/core)                         | The implementation of the different [HTTP API](https://eik.dev/docs/server/http-api) endpoint handlers.                                                                                                                                                         |
+| [`@eik/sink`](https://github.com/eik-lib/sink)                         | Interface implemented by the different [storage sinks](https://eik.dev/docs/server/storage).                                                                                                                                                                    |
+| [`@eik/sink-file-system`](https://github.com/eik-lib/sink-file-system) | Storage sink using the local file system.                                                                                                                                                                                                                       |
+| [`@eik/sink-gcs`](https://github.com/eik-lib/sink-gcs)                 | Storage sink for [Google Cloud Storage](https://cloud.google.com/storage/).                                                                                                                                                                                     |
+| [`@eik/sink-memory`](https://github.com/eik-lib/sink-memory)           | In memory storage sink, useful for automated tests.                                                                                                                                                                                                             |
+| [`@eik/node-client`](https://github.com/eik-lib/node-client)           | Utility for [linking to files on Eik](https://eik.dev/docs/introduction/workflow#linking-to-your-assets-from-html) or localhost based on environment, and to do [browser import mapping](https://eik.dev/docs/guides/browser-importmap#download-maps-from-eik). |
+| [`@eik/cli`](https://github.com/eik-lib/cli)                           | Command line interface to [publish packages](https://eik.dev/docs/introduction/workflow#publish-your-application-to-eik) and import maps to Eik, and to [manage aliases](https://eik.dev/docs/dependencies/aliases).                                            |
+| [`@eik/common`](https://github.com/eik-lib/common)                     | The [`eik.json` schema](https://eik.dev/docs/reference/eik-json) and a gathering of shared utilities.                                                                                                                                                           |
+
 ## Workflow
 
 Fork the repo(s) you would like to contribute to and make a branch off of `main`.
