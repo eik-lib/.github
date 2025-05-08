@@ -60,7 +60,6 @@ A short description of the different modules.
 flowchart TD
     COMMON["@eik/common"]
     CLI["@eik/cli"]
-    NODECLIENT["@eik/node-client"]
     ESBUILD["@eik/esbuild-plugin"]
     POSTCSS["@eik/postcss-plugin"]
     ROLLUP["@eik/rollup-plugin"]
@@ -69,7 +68,6 @@ flowchart TD
     WEBPACK["@eik/webpack-plugin"]
 
     CLI --> COMMON
-    NODECLIENT --> COMMON
     ESBUILD --> COMMON
     ROLLUP --> COMMON
     POSTCSS --> COMMON
