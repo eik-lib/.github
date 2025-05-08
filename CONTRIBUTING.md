@@ -4,7 +4,7 @@ Thank you for showing an interest in contributing to Eik 🧡
 
 Eik is divided in a collection of modules, each in their separate repositories. The contribution process is the same for all of them.
 
-Below is a map of the dependencies between Eik modules. Development dependencies are not shown.
+Below is a map of the dependencies between Eik modules. Development tools are shown in a separate diagram below.
 
 ```mermaid
 flowchart TD
@@ -53,6 +53,44 @@ A short description of the different modules.
 | [`@eik/node-client`](https://github.com/eik-lib/node-client)           | Utility for [linking to files on Eik](https://eik.dev/docs/introduction/workflow#linking-to-your-assets-from-html) or localhost based on environment, and to do [browser import mapping](https://eik.dev/docs/guides/browser-importmap#download-maps-from-eik). |
 | [`@eik/cli`](https://github.com/eik-lib/cli)                           | Command line interface to [publish packages](https://eik.dev/docs/introduction/workflow#publish-your-application-to-eik) and import maps to Eik, and to [manage aliases](https://eik.dev/docs/dependencies/aliases).                                            |
 | [`@eik/common`](https://github.com/eik-lib/common)                     | The [`eik.json` schema](https://eik.dev/docs/reference/eik-json) and a gathering of shared utilities.                                                                                                                                                           |
+
+### Development tools
+
+```mermaid
+flowchart TD
+    COMMON["@eik/common"]
+    CLI["@eik/cli"]
+    NODECLIENT["@eik/node-client"]
+    ESBUILD["@eik/esbuild-plugin"]
+    POSTCSS["@eik/postcss-plugin"]
+    ROLLUP["@eik/rollup-plugin"]
+    SEMREL["@eik/semantic-release"]
+    VITE["@eik/vite-plugin"]
+    WEBPACK["@eik/webpack-plugin"]
+
+    CLI --> COMMON
+    NODECLIENT --> COMMON
+    ESBUILD --> COMMON
+    ROLLUP --> COMMON
+    POSTCSS --> COMMON
+    SEMREL --> COMMON
+    WEBPACK --> COMMON
+
+    SEMREL --> CLI
+
+    VITE --> ROLLUP
+```
+
+A short description of the different modules.
+
+| Name                                                                   | Description                                                                            |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [`@eik/esbuild-plugin`](https://github.com/eik-lib/esbuild-plugin)     | Plugin to do build-time import-mapping.                                                |
+| [`@eik/postcss-plugin`](https://github.com/eik-lib/postcss-plugin)     | Plugin to do build-time import-mapping.                                                |
+| [`@eik/rollup-plugin`](https://github.com/eik-lib/rollup-plugin)       | Plugin to do build-time import-mapping.                                                |
+| [`@eik/semantic-release`](https://github.com/eik-lib/semantic-release) | Plugin to use Semantic Release for versioning `eik.json` and publish to an Eik server. |
+| [`@eik/vite-plugin`](https://github.com/eik-lib/vite-plugin)           | Plugin to do build-time import-mapping.                                                |
+| [`@eik/webpack-plugin`](https://github.com/eik-lib/webpack-plugin)     | Plugin to do build-time import-mapping.                                                |
 
 ## Workflow
 
