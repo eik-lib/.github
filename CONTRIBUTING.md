@@ -8,15 +8,15 @@ Below is a map of the dependencies between Eik modules. Development dependencies
 
 ```mermaid
 flowchart TD
-    COMMON[@eik/common]
-    CLI[@eik/cli]
-    NODECLIENT[@eik/node-client]
-    SINK[@eik/sink]
-    SINKFS[@eik/sink-file-system]
-    SINKGCS[@eik/sink-gcs]
-    SINKMEM[@eik/sink-memory]
-    CORE[@eik/core]
-    SVC[@eik/service]
+    COMMON["@eik/common"]
+    CLI["@eik/cli"]
+    NODECLIENT["@eik/node-client"]
+    SINK["@eik/sink"]
+    SINKFS["@eik/sink-file-system"]
+    SINKGCS["@eik/sink-gcs"]
+    SINKMEM["@eik/sink-memory"]
+    CORE["@eik/core"]
+    SVC["@eik/service"]
 
     CLI --> COMMON
     NODECLIENT --> COMMON
